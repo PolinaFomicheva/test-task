@@ -2,17 +2,38 @@ const inputEl = document.querySelector('input');
 const buttonEl = document.querySelector('button');
 const timerEl = document.querySelector('span');
 
-// Напишите реализацию createTimerAnimator
-// который будет анимировать timerEl
+
+const formatTime = (seconds) => {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const remainingSeconds = seconds % 60;
+
+  return [
+    hours.toString().padStart(2, '0'),
+    minutes.toString().padStart(2, '0'),
+    remainingSeconds.toString().padStart(2, '0'),
+  ].join(':');
+};
+
 const createTimerAnimator = () => {
-  return (seconds) => {};
+  let intervalId = null;
+
+  return (seconds) => {
+    clearInterval(intervalId);
+    let currentTime = seconds;
+
+    intervalId = setInterval(() => {
+      timerEl.textContent = formatTime(currentTime);
+      currentTime = currentTime > 0 ? currentTime - 1 : 0;
+    }, 1000);
+  };
 };
 
 const animateTimer = createTimerAnimator();
 
 inputEl.addEventListener('input', () => {
-  // Очистите input так, чтобы в значении
-  // оставались только числа
+  const value = inputEl.value;
+  inputEl.value = value.replace(/\D/g, '')
 });
 
 buttonEl.addEventListener('click', () => {
@@ -22,3 +43,4 @@ buttonEl.addEventListener('click', () => {
 
   inputEl.value = '';
 });
+
