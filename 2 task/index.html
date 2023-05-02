@@ -16,10 +16,8 @@
     <!-- HEADER -->
 
     <header class='header'>
-      <div class='header-container'>
-        <div class='header-line'>
-          <div>
-            <img class='header-logo' src = "svg/logo_welbexlogo.svg" alt="logo" href="#">
+          <div class="welbexlogo">
+            <img class='welbexlogo-img' src = "svg/logo_welbexlogo.svg" alt="logo" href="#">
             <p class="header-logo-text">крупный интегратор CRM в Росcии и ещё 8 странах</p>
           </div>
 
@@ -34,15 +32,15 @@
                 <li class="menu-list-item">
                   <a class="menu-link" href="#0">Кейсы</a></li>
                 <li class="menu-list-item">
-                  <a class="menu-link" href="#0">Сертификаты</a></li>
+                  <a class="menu-link cert" href="#0">Сертификаты</a></li>
               </ul>
               </nav>
 
             <div class='connect'>
               <div class='number'> 
-                <a class='num' href="tel:+7999-888-76-54">+7 (999)-888-76-54</a>
+                <a class='num' href="tel:+7999-888-76-54">+7 555 555-55-55</a>
               </div>
-              <div class="connect-img">
+              <div class="connect-imgs">
                 <img class="connect-img-tg" src="svg/telegram.svg" alt="telegram">
                 <img class="connect-img-vb" src="svg/viber.svg" alt="viber">
                 <img class="connect-img-wa" src="svg/whatsapp.svg" alt="whatsapp">
@@ -55,6 +53,9 @@
  <!-- MAIN -->
 
     <main class="main">
+      <img src="img/purple ball.png" class="purple-ball-mobile">
+      <img src="img/red ball.png" class="red-ball-mobile">
+      <img src="img/red light.png" class="red-light-mobile">
        <!-- left -->
       <div class="left-container">
         <h1 class="left-h1-top">Зарабатывайте больше</h1>
@@ -65,15 +66,29 @@
       <!-- right -->
       <div class="right-container">
         <p class="right-header-top">Вместе с<a href="#0"> бесплатной консультацией</a> мы дарим:</p>
-        <p class="right-header-down">Виджеты</p>
-        <p class="right-text">30 готовых решений</p>
-        <p class="right-header-down">Dashboard</p>
+        <div class="right-container-menu">
+
+          <div class="right-container-menu-list">
+        <h3 class="right-header-down">Виджеты</h3>
+        <p class="right-text"> 30 готовых решений</p>
+        </div>
+
+        <div class="right-container-menu-list">
+        <h3 class="right-header-down">Dashboard</h3>
         <p class="right-text">с показателями
           вашего бизнеса</p>
-        <p class="right-header-down">Skype Аудит</p>
+          </div>
+
+          <div class="right-container-menu-list">
+        <h3 class="right-header-down">Skype Аудит</h3>
         <p class="right-text">отдела продажи CRM системы</p>
-        <p class="right-header-down">35 дней</p>
+          </div>
+
+        <div class="right-container-menu-list">
+        <h3 class="right-header-down">35 дней</h3>
         <p class="right-text">использования CRM</p>
+        </div>
+        </div>
         <button type="submit" class="button-submit">Получить консультацию</button>
       </div>
     </main>
@@ -81,7 +96,9 @@
      <!-- FOOTER -->
 
     <footer class="footer">
-<h3 class="footer-h3">О компании</h3>
+
+<div class="about-company">
+  <h3 class="footer-h3">О компании</h3>
 <nav class="footer-menu">
   <ul class="footer-menu-list">
     <li class="footer-menu-list-item">
@@ -90,7 +107,10 @@
       <a class="footer-menu-link" href="#0">Вакансии</a></li>
   </ul>
   </nav>
-<h3 class="footer-h3">Меню</h3>
+</div>
+
+<div class="company-menu">
+  <h3 class="footer-h3">Меню</h3>
 <nav class="footer-menu">
   <ul class="footer-menu-list">
     <li class="footer-menu-list-item">
@@ -115,18 +135,21 @@
                        <a class="footer-menu-link" href="#0">Вопрос / Ответ</a></li>
   </ul>
   </nav>
-<h3 class="footer-h3">Контакты</h3>
+</div>
+
+<div class="company-address">
+  <h3 class="footer-h3">Контакты</h3>
 <address class="address">
-  <a class='num-footer' href="tel:+7999-888-76-54">+7 (999)-888-76-54</a>
+  <a class='num-footer' href="tel:+7999-888-76-54">+7 555 555-55-55</a>
   <ul class="socials">
     <li class="socials-item">
-    <img href="#0" class="socials-link socials-link-telegram" src="svg/telegram.svg" alt="telegram"></img>
+    <img href="#0" class="socials-link socials-link-telegram" src="svg/telegram.svg" alt="telegram">
   </li>
   <li class="socials-item">
-    <img href="#0" class="socials-link socials-link-viber" src="svg/viber.svg" alt="viber"></img>
+    <img href="#0" class="socials-link socials-link-viber" src="svg/viber.svg" alt="viber">
   </li>
   <li class="socials-item">
-    <img href="#0" class="socials-link socials-link-whatsapp" src="svg/whatsapp.svg" alt="whatsapp"></img>
+    <img href="#0" class="socials-link socials-link-whatsapp" src="svg/whatsapp.svg" alt="whatsapp">
   </li>
 </ul>
 <p class="footer-address">Москва, Путевой проезд 3с1, к 902</p>
@@ -135,6 +158,12 @@
   <p class="copyright-text-up">©WELBEX 2022. Все права защищены.</p>
   <a class="copyright-text-down" href="#0">Политика конфиденциальности</a>
 </div>
+</div>
     </footer>
   </body>
 </html>
+
+
+
+<!-- сделала базовую верстку, в детали не углублялась, без pixelperfect
+хотела сделать побсытрее, поэтому кое-что до конца не пророботала -->
